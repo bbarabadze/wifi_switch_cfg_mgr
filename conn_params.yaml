@@ -1,0 +1,43 @@
+---
+aruba:
+- AsyncEOSDriver
+- auth_username: ARUBA_USER
+  auth_password: ARUBA_PASS
+  transport: asynctelnet
+aruba2022:
+  - AsyncEOSDriver
+  - auth_username: ARUBA2022_USER
+    auth_password: ARUBA2022_PASS
+    auth_strict_key: false
+    transport: asyncssh
+    ssh_config_file: false
+ruckus:
+- AsyncIOSXEDriver
+- auth_username: RUCKUS_USER
+  auth_password: RUCKUS_PASS
+  auth_secondary: RUCKUS_EN
+  transport: asynctelnet
+ruckus_ssh:
+- AsyncIOSXEDriver
+- auth_username: RUCKUS_USER
+  auth_password: RUCKUS_PASS
+  auth_secondary: RUCKUS_EN
+  auth_strict_key: false
+  transport: asyncssh
+  ssh_config_file: false
+microsoft_ruckus:
+- AsyncIOSXEDriver
+- auth_username: MRUCKUS_USER
+  auth_password: MRUCKUS_PASS
+  auth_secondary: MRUCKUS_EN
+  auth_strict_key: false
+  transport: asyncssh
+  ssh_config_file: false
+cisco:
+- AsyncIOSXEDriver
+- auth_username: CISCO_USER
+  auth_password: CISCO_PASS
+  auth_secondary: CISCO_EN
+  auth_strict_key: false
+  transport: asyncssh
+  ssh_config_file: false
